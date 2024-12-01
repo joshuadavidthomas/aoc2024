@@ -1,0 +1,19 @@
+set dotenv-load := true
+set unstable := true
+
+[private]
+default:
+    @just --list --list-submodules
+
+[private]
+fmt:
+    @just --fmt
+
+next *ARGS:
+    cargo run -p aoc2024-cli -- {{ ARGS }}
+
+solve DAY:
+    cargo run -p aoc2024-day{{ DAY }}
+
+test DAY:
+    cargo test -p aoc2024-day{{ DAY }}

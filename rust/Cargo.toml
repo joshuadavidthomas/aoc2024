@@ -1,3 +1,7 @@
 [workspace]
 members = ["crates/*"]
 resolver = "2"
+
+[workspace.dependencies]
+aoc2024-cli = { path = "crates/aoc2024-cli" }
+aoc2024-macros = { path = "crates/aoc2024-macros" }
